@@ -1,4 +1,4 @@
-package strategy.strategies;
+package strategy.simple.strategies;
 
 public interface PayStrategy {
   boolean pay(int paymentAmount);
