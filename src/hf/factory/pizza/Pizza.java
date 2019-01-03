@@ -1,23 +1,24 @@
 package hf.factory.pizza;
 
-import java.util.ArrayList;
-import java.util.List;
+import hf.factory.Ingredientsfactory.ingredients.Cheese;
+import hf.factory.Ingredientsfactory.ingredients.Clams;
+import hf.factory.Ingredientsfactory.ingredients.Dough;
+import hf.factory.Ingredientsfactory.ingredients.Pepperoni;
+import hf.factory.Ingredientsfactory.ingredients.Sauce;
+import hf.factory.Ingredientsfactory.ingredients.Veggies;
+import java.util.Arrays;
 
 public abstract class Pizza {
 
   public String name;
-  public String dough;
-  public String sauce;
-  public List<String> toppings = new ArrayList<>();
+  public Dough dough;
+  public Sauce sauce;
+  public Veggies[] veggies;
+  public Cheese cheese;
+  public Pepperoni pepperoni;
+  public Clams clam;
 
   public void prepare() {
-    System.out.println("Preparing " + name);
-    System.out.println("Tossing dough...");
-    System.out.println("Adding sauce...");
-    System.out.println("Adding toppings...");
-    for (String topping : toppings) {
-      System.out.println("   " + topping);
-    }
   }
 
   public void bake() {
@@ -34,5 +35,22 @@ public abstract class Pizza {
 
   public String getName() {
     return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    return "Pizza{" +
+        "name='" + name + '\'' +
+        ", dough='" + dough + '\'' +
+        ", sauce='" + sauce + '\'' +
+        ", veggies=" + Arrays.toString(veggies) +
+        ", cheese=" + cheese +
+        ", pepperoni=" + pepperoni +
+        ", clam=" + clam +
+        '}';
   }
 }

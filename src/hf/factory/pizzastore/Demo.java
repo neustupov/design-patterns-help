@@ -10,8 +10,10 @@ public class Demo {
 
     Pizza pizza = nyStore.orderPizza("cheese");
     System.out.println(pizza.getName());
+    System.out.println(pizza);
 
-    Pizza pizza1 = chicagoStore.orderPizza("cheese");
+    Pizza pizza1 = chicagoStore.orderPizza("clam");
     System.out.println(pizza1.getName());
+    System.out.println(pizza1);
   }
 }

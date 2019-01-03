@@ -1,10 +1,10 @@
 package hf.factory.pizzastore;
 
+import hf.factory.Ingredientsfactory.NYPizzaIngredientFactory;
+import hf.factory.Ingredientsfactory.PizzaIngridientFactory;
+import hf.factory.pizza.CheesePizza;
+import hf.factory.pizza.ClamPizza;
 import hf.factory.pizza.Pizza;
-import hf.factory.pizza.ny.NYStyleCheesePizza;
-import hf.factory.pizza.ny.NYStyleClamPizza;
-import hf.factory.pizza.ny.NYStylePepperoniPizza;
-import hf.factory.pizza.ny.NYStyleVeggiePizza;
 
 public class NYPizzaStore extends PizzaStore {
 
@@ -13,18 +13,16 @@ public class NYPizzaStore extends PizzaStore {
 
     Pizza pizza = null;
 
+    PizzaIngridientFactory ingridientFactory = new NYPizzaIngredientFactory();
+
     switch (type) {
       case "cheese":
-        pizza = new NYStyleCheesePizza();
-        break;
-      case "pepperoni":
-        pizza = new NYStylePepperoniPizza();
+        pizza = new CheesePizza(ingridientFactory);
+        pizza.setName("New York Style Cheese Pizza");
         break;
       case "clam":
-        pizza = new NYStyleClamPizza();
-        break;
-      case "veggie":
-        pizza = new NYStyleVeggiePizza();
+        pizza = new ClamPizza(ingridientFactory);
+        pizza.setName("New York Style Clam Pizza");
         break;
     }
     return pizza;
