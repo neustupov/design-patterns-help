@@ -1,4 +1,4 @@
-package hf.factory.Ingredientsfactory.ingredients;
+package hf.factory.ingredientfactory.ingredients;
 
 public abstract class Pepperoni {
 

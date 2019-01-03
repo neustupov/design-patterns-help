@@ -1,4 +1,4 @@
-package hf.factory.Ingredientsfactory.ingredients;
+package hf.factory.ingredientfactory.ingredients;
 
 public class FreshClams extends Clams {
 

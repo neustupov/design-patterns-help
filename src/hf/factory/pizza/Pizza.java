@@ -1,11 +1,11 @@
 package hf.factory.pizza;
 
-import hf.factory.Ingredientsfactory.ingredients.Cheese;
-import hf.factory.Ingredientsfactory.ingredients.Clams;
-import hf.factory.Ingredientsfactory.ingredients.Dough;
-import hf.factory.Ingredientsfactory.ingredients.Pepperoni;
-import hf.factory.Ingredientsfactory.ingredients.Sauce;
-import hf.factory.Ingredientsfactory.ingredients.Veggies;
+import hf.factory.ingredientfactory.ingredients.Cheese;
+import hf.factory.ingredientfactory.ingredients.Clams;
+import hf.factory.ingredientfactory.ingredients.Dough;
+import hf.factory.ingredientfactory.ingredients.Pepperoni;
+import hf.factory.ingredientfactory.ingredients.Sauce;
+import hf.factory.ingredientfactory.ingredients.Veggies;
 import java.util.Arrays;
 
 public abstract class Pizza {

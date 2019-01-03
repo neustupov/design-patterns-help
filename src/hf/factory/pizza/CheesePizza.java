@@ -1,6 +1,6 @@
 package hf.factory.pizza;
 
-import hf.factory.Ingredientsfactory.PizzaIngridientFactory;
+import hf.factory.ingredientfactory.PizzaIngridientFactory;
 
 public class CheesePizza extends Pizza {
 

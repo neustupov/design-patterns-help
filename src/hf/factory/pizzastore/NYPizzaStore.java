@@ -1,7 +1,7 @@
 package hf.factory.pizzastore;
 
-import hf.factory.Ingredientsfactory.NYPizzaIngredientFactory;
-import hf.factory.Ingredientsfactory.PizzaIngridientFactory;
+import hf.factory.ingredientfactory.NYPizzaIngredientFactory;
+import hf.factory.ingredientfactory.PizzaIngridientFactory;
 import hf.factory.pizza.CheesePizza;
 import hf.factory.pizza.ClamPizza;
 import hf.factory.pizza.Pizza;
