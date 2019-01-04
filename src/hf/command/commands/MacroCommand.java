@@ -14,9 +14,4 @@ public class MacroCommand implements Command {
       commands[i].execute();
     }
   }
-
-  @Override
-  public void undo() {
-
-  }
 }

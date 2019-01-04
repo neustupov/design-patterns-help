@@ -8,11 +8,11 @@ public class Light {
     this.name = name;
   }
 
-  void on() {
+  public void on() {
     System.out.println("Light on!");
   }
 
-  void off() {
+  public void off() {
     System.out.println("Light off!");
   }
 }

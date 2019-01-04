@@ -11,23 +11,19 @@ public class Stereo {
   public Stereo() {
   }
 
-  void on() {
+  public void on() {
     System.out.println("On stereo");
   }
 
-  void off() {
+  public void off() {
     System.out.println("Off stereo");
   }
 
-  void setCD() {
+  public void setCD() {
     System.out.println("Set CD");
   }
 
-  void outCD() {
-    System.out.println("Out CD");
-  }
-
-  void setVolume(int volume) {
+  public void setVolume(int volume) {
     System.out.println("Volume: " + volume);
   }
 }

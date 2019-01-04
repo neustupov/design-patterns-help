@@ -1,26 +1,22 @@
 package hf.command;
 
 import hf.command.commands.Command;
-import hf.command.commands.NoCommand;
 
 public class RemoteControlWithUndo {
 
   private Command[] onCommands;
   private Command[] offCommands;
-  private Command undoCommand;
 
   public RemoteControlWithUndo() {
     onCommands = new Command[7];
     offCommands = new Command[7];
 
-    Command noCommand = new NoCommand();
-
     for (int i = 0; i < 7; i++) {
-      onCommands[i] = noCommand;
-      offCommands[i] = noCommand;
+      onCommands[i] = () -> {
+      };
+      offCommands[i] = () -> {
+      };
     }
-
-    undoCommand = noCommand;
   }
 
   public void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -30,16 +26,10 @@ public class RemoteControlWithUndo {
 
   public void onButtonWasPushed(int slot) {
     onCommands[slot].execute();
-    undoCommand = onCommands[slot];
   }
 
   public void offButtonWasPushed(int slot) {
     offCommands[slot].execute();
-    undoCommand = offCommands[slot];
-  }
-
-  public void undoButtonWasPushed() {
-    undoCommand.undo();
   }
 
   @Override
