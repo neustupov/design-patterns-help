@@ -1,4 +1,6 @@
-package hf.iterator;
+package hf.iteratorandcomposite;
+
+import java.util.Arrays;
 
 public class Demo {
 
@@ -7,7 +9,7 @@ public class Demo {
     DinnerMenu dinnerMenu = new DinnerMenu();
     CafeMenu cafeMenu = new CafeMenu();
 
-    Waitress waitress = new Waitress(pancakeHouseMenu, dinnerMenu, cafeMenu);
+    Waitress waitress = new Waitress(Arrays.asList(pancakeHouseMenu, dinnerMenu, cafeMenu));
 
     waitress.printMenu();
   }

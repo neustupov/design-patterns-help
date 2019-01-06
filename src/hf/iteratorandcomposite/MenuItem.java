@@ -1,4 +1,4 @@
-package hf.iterator;
+package hf.iteratorandcomposite;
 
 public class MenuItem {
 

@@ -1,4 +1,4 @@
-package hf.iterator;
+package hf.iteratorandcomposite;
 
 import java.util.ArrayList;
 import java.util.Iterator;
