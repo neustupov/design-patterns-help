@@ -1,6 +1,8 @@
 package hf.iterator;
 
+import java.util.Iterator;
+
 public interface Menu {
 
-  public DinnerMenuIterator createIterator();
+  public Iterator createIterator();
 }
