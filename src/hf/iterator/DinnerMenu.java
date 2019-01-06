@@ -1,6 +1,6 @@
 package hf.iterator;
 
-public class DinnerMenu {
+public class DinnerMenu implements Menu{
 
   static final int MAX_ITEMS = 6;
 
@@ -31,7 +31,7 @@ public class DinnerMenu {
     }
   }
 
-  public Iterator createIterator() {
+  public DinnerMenuIterator createIterator() {
     return new DinnerMenuIterator(menuItems);
   }
 }

@@ -1,11 +1,13 @@
 package hf.iterator;
 
+import java.util.Iterator;
+
 public class Waitress {
 
-  PancakeHouseMenu pancakeHouseMenu;
-  DinnerMenu dinnerMenu;
+  private Menu pancakeHouseMenu;
+  private Menu dinnerMenu;
 
-  public Waitress(PancakeHouseMenu pancakeHouseMenu, DinnerMenu dinnerMenu) {
+  public Waitress(Menu pancakeHouseMenu, Menu dinnerMenu) {
     this.pancakeHouseMenu = pancakeHouseMenu;
     this.dinnerMenu = dinnerMenu;
   }

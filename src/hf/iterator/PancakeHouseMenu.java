@@ -1,6 +1,7 @@
 package hf.iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class PancakeHouseMenu {
@@ -25,7 +26,7 @@ public class PancakeHouseMenu {
     menuItems.add(menuItem);
   }
 
-  public Iterator createIterator() {
-    return new PancakeHouseMenuIterator(menuItems);
+  public Iterator<MenuItem> createIterator() {
+    return menuItems.iterator();
   }
 }
