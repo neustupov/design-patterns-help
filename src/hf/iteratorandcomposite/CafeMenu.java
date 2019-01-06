@@ -3,7 +3,7 @@ package hf.iteratorandcomposite;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class CafeMenu implements Menu {
+public class CafeMenu{
 
   HashMap<String, MenuItem> menuItems = new HashMap<>();
 
@@ -21,7 +21,6 @@ public class CafeMenu implements Menu {
     menuItems.put(menuItem.name, menuItem);
   }
 
-  @Override
   public Iterator createIterator() {
     return menuItems.values().iterator();
   }

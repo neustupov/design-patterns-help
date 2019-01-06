@@ -1,6 +1,8 @@
 package hf.iteratorandcomposite;
 
-public class MenuItem {
+import java.util.Iterator;
+
+public class MenuItem extends MenuComponent {
 
   String name;
   String description;
@@ -31,6 +33,12 @@ public class MenuItem {
   }
 
   @Override
+  public void print() {
+    System.out.print(getName() + " : " + getDescription() + " : " + getPrice() + " : "
+        + isVegetarian());
+  }
+
+  @Override
   public String toString() {
     return "MenuItem{" +
         "name='" + name + '\'' +
@@ -38,5 +46,9 @@ public class MenuItem {
         ", vegetarian=" + vegetarian +
         ", price=" + price +
         '}';
+  }
+
+  public Iterator<MenuComponent> createIterator() {
+    return new NullIterator();
   }
 }

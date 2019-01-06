@@ -1,28 +1,32 @@
 package hf.iteratorandcomposite;
 
 import java.util.Iterator;
-import java.util.List;
 
 public class Waitress {
 
-  List<Menu> menus;
+  MenuComponent allMenus;
 
-  public Waitress(List<Menu> menus) {
-    this.menus = menus;
+  public Waitress(MenuComponent allMenus) {
+    this.allMenus = allMenus;
   }
 
   public void printMenu() {
-    Iterator<Menu> menuIterator = menus.iterator();
-    while (menuIterator.hasNext()){
-      Menu menu = menuIterator.next();
-      printMenu(menu.createIterator());
-    }
+    allMenus.print();
   }
 
-  public void printMenu(Iterator iterator) {
+  public void printVegetarianMenu() {
+    Iterator<MenuComponent> iterator = allMenus.createIterator();
+    System.out.println("Veg menu");
+
     while (iterator.hasNext()) {
-      MenuItem menuItem = (MenuItem) iterator.next();
-      System.out.println(menuItem);
+      MenuComponent menuComponent = iterator.next();
+      try {
+        if (menuComponent.isVegetarian()) {
+          menuComponent.print();
+        }
+      } catch (UnsupportedOperationException e) {
+        e.printStackTrace();
+      }
     }
   }
 }

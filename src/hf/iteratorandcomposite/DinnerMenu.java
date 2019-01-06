@@ -2,7 +2,7 @@ package hf.iteratorandcomposite;
 
 import java.util.Iterator;
 
-public class DinnerMenu implements Menu{
+public class DinnerMenu {
 
   static final int MAX_ITEMS = 6;
 
